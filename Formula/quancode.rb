@@ -11,7 +11,7 @@ class Quancode < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/qq418716640/quancode/releases/download/v0.4.12/quancode_0.4.12_darwin_amd64.tar.gz"
-      sha256 "4628e0eac6030dbeab8b1fc39751fd7990bed7713bd0e7439c38c626bd90bf1a"
+      sha256 "647fdda5e04e64ad0d76f7bfd9eaeef7f44ea64ce47772e9a201a8f85c77ba9e"
 
       define_method(:install) do
         bin.install "quancode"
@@ -20,7 +20,7 @@ class Quancode < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/qq418716640/quancode/releases/download/v0.4.12/quancode_0.4.12_darwin_arm64.tar.gz"
-      sha256 "74234bd7395d873d067f86249ada6902aea14e3fb6e4a9233c6093f33e66a9a3"
+      sha256 "1ef347b18ec1b688ce3aad2b5ec747f226aa5363d4e1be2e5e4e336de47004e5"
 
       define_method(:install) do
         bin.install "quancode"
@@ -32,7 +32,7 @@ class Quancode < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/qq418716640/quancode/releases/download/v0.4.12/quancode_0.4.12_linux_amd64.tar.gz"
-      sha256 "ceac8a01bb1eaedf62ccc5fab179a6b89d48e2226cd230c2e46abf6ad530d4d2"
+      sha256 "ecf1a36647758e59580a4ddfbe332cbb1d653fa670a092dd1ad468d6a4f59af9"
       define_method(:install) do
         bin.install "quancode"
         generate_completions_from_executable(bin/"quancode", "completion")
@@ -40,7 +40,7 @@ class Quancode < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/qq418716640/quancode/releases/download/v0.4.12/quancode_0.4.12_linux_arm64.tar.gz"
-      sha256 "f0cd86ec4b9e06a74d63f17547898c3b8ea03af66ad1a5685076a28af833b93b"
+      sha256 "9fcb91043b1ef5d84d579c9bcfd40a514a42b3c4bca2d39a209e0f0bb576ac51"
       define_method(:install) do
         bin.install "quancode"
         generate_completions_from_executable(bin/"quancode", "completion")
