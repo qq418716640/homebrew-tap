@@ -5,13 +5,13 @@
 class Quancode < Formula
   desc "Unified CLI orchestrator for AI coding agents"
   homepage "https://github.com/qq418716640/quancode"
-  version "0.5.0"
+  version "0.5.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/qq418716640/quancode/releases/download/v0.5.0/quancode_0.5.0_darwin_amd64.tar.gz"
-      sha256 "66d6b6243d12a972590dc73ee64c26a79a2b929d186cdcaefc9fbc1bf42eb439"
+      url "https://github.com/qq418716640/quancode/releases/download/v0.5.1/quancode_0.5.1_darwin_amd64.tar.gz"
+      sha256 "bb2e64df030d18923a46e89bf9570a18d167666a5f9a12b7ac26ea4799f608e4"
 
       define_method(:install) do
         bin.install "quancode"
@@ -19,8 +19,8 @@ class Quancode < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/qq418716640/quancode/releases/download/v0.5.0/quancode_0.5.0_darwin_arm64.tar.gz"
-      sha256 "5886715103532ebb8ceb765e7f87accad7bc8e272ba76d259aa18a2fbbdcce27"
+      url "https://github.com/qq418716640/quancode/releases/download/v0.5.1/quancode_0.5.1_darwin_arm64.tar.gz"
+      sha256 "c324836f527f4b9ce698a92e6012d6fbd614b841dcb29463cbc263d7cac3e213"
 
       define_method(:install) do
         bin.install "quancode"
@@ -31,16 +31,16 @@ class Quancode < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/qq418716640/quancode/releases/download/v0.5.0/quancode_0.5.0_linux_amd64.tar.gz"
-      sha256 "c2ea30705ede226a1d759d52f44373d905d92a82abce3241c9edad44cfaec04a"
+      url "https://github.com/qq418716640/quancode/releases/download/v0.5.1/quancode_0.5.1_linux_amd64.tar.gz"
+      sha256 "1b1c0435279e9a2f246833fc24daff9e102297708eb7db227f8f452a28323de5"
       define_method(:install) do
         bin.install "quancode"
         generate_completions_from_executable(bin/"quancode", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/qq418716640/quancode/releases/download/v0.5.0/quancode_0.5.0_linux_arm64.tar.gz"
-      sha256 "bd24f24f8d94c5e110d6117341323c660de4edd928baaf1a97265262636de643"
+      url "https://github.com/qq418716640/quancode/releases/download/v0.5.1/quancode_0.5.1_linux_arm64.tar.gz"
+      sha256 "df76efd81c16dc8af9026bd8320f3fa764c257126cb4c7d8daa87b45c38f2175"
       define_method(:install) do
         bin.install "quancode"
         generate_completions_from_executable(bin/"quancode", "completion")
